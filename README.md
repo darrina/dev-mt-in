@@ -187,7 +187,7 @@ Yesterday we stored our profiles in local storage, allowing them to persist betw
 
 Before we start writing our new code, let's make some adjustments. Delete the array of friends from the `profileService.checkForProfile` function and run `localStorage.removeItem('myProfile')` in your console so we can start fresh.
 
-To begin, we need to inject Angular's built in `$http` service into our `profileService`. `$http` will allow us to make HTTP requests for any CRUD operation (Create, Read, Update, Delete). We will also need to create a variable named `baseUrl` and set it equal to _**--BASEURL FIXME--**_.
+To begin, we need to inject Angular's built in `$http` service into our `profileService`. `$http` will allow us to make HTTP requests for any CRUD operation (Create, Read, Update, Delete). We will also need to create a variable named `baseUrl` and set it equal to `'http://www.connections.devmounta.in'`.
 
 We're going to adjust our `saveProfile` function inside of `profileService`. Now instead of saving our whole profile to local storage, we want to post it to the database, and just save the unique `_id` the database sends back to us. Let's delete everything we currently have inside of the function and start from scratch.
 
